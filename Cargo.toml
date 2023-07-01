@@ -1,0 +1,18 @@
+[package]
+name = "deno_19670_repro"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+deno_runtime = { git = "https://github.com/denoland/deno.git", rev="476e4ed03c038a4c9306cf96045017464f2dbdf8"}
+deno_core = { git = "https://github.com/denoland/deno.git", rev="476e4ed03c038a4c9306cf96045017464f2dbdf8"}
+deno_ops = { git = "https://github.com/denoland/deno.git", rev="476e4ed03c038a4c9306cf96045017464f2dbdf8"}
+deno_broadcast_channel = { git = "https://github.com/denoland/deno.git", rev="476e4ed03c038a4c9306cf96045017464f2dbdf8"}
+
+serde_json = {version="1.0.85", features=["preserve_order"]}
+futures = "0.3.21"
+futures-util = "0.3.28"
+tokio = {version= "1.21", features=["macros", "rt", "rt-multi-thread"]}
+lazy_static = "1.4.0"
